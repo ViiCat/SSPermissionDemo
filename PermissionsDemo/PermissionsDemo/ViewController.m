@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.title = @"授权";
     self.tbView.delegate = self;
     self.tbView.dataSource = self;
 }
@@ -53,14 +54,14 @@
     if (!_dataSource) {
         _dataSource = @{@"相册":@"ImagePickerViewController",
                         @"相机":@"TakingPictureViewController",
-                        @"麦克风":@"",
-                        @"位置":@"",
-                        @"日历":@"",
-                        @"提醒事项":@"",
-                        @"运动与健身":@"",
-                        @"健康更新":@"",
-                        @"蓝牙":@"",
-                        @"媒体资料库":@""
+//                        @"麦克风":@"",
+//                        @"位置":@"",
+//                        @"日历":@"",
+//                        @"提醒事项":@"",
+//                        @"运动与健身":@"",
+//                        @"健康更新":@"",
+//                        @"蓝牙":@"",
+//                        @"媒体资料库":@""
                         };
     }
     return _dataSource;

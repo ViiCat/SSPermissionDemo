@@ -29,6 +29,16 @@
     
 #if TARGET_IPHONE_SIMULATOR //模拟器
     NSLog(@"模拟器中无法打开照相机,请在真机中使用");
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+    
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"打开相机失败" message:@"模拟器中无法打开照相机,请在真机中使用" preferredStyle:UIAlertControllerStyleAlert];
+
+    [alertController addAction:cancelAction];
+    
+    [controller presentViewController:alertController animated:YES completion:nil];
+    
 #elif TARGET_OS_IPHONE //真机
     if ([[SSAccessCamera shareInstance] judgeVideoInputAvailableWithController:controller]) {
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];

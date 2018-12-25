@@ -108,6 +108,47 @@
             </objects>
             <point key="canvasLocation" x="-76" y="133"/>
         </scene>
+        <!--日历提醒-->
+        <scene sceneID="hrE-mV-cDj">
+            <objects>
+                <viewController storyboardIdentifier="CalendarReminderViewController" title="日历提醒" id="Fjq-CM-R5c" customClass="CalendarReminderViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CSI-0g-UdW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Moh-Yr-fxl">
+                                <rect key="frame" x="0.0" y="70" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="567421617.02287698">
+                                    <!--2018-12-25 09:06:57 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="zh_CN"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upU-l4-CHQ">
+                                <rect key="frame" x="139" y="326" width="97" height="30"/>
+                                <state key="normal" title="Add Reminder"/>
+                                <connections>
+                                    <action selector="addReminder:" destination="Fjq-CM-R5c" eventType="touchUpInside" id="GrN-t2-Zrd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Moh-Yr-fxl" firstAttribute="top" secondItem="g8g-Kt-LI7" secondAttribute="top" constant="50" id="3RF-Nd-WaN"/>
+                            <constraint firstItem="Moh-Yr-fxl" firstAttribute="trailing" secondItem="g8g-Kt-LI7" secondAttribute="trailing" id="77f-Ms-Jv7"/>
+                            <constraint firstItem="Moh-Yr-fxl" firstAttribute="leading" secondItem="g8g-Kt-LI7" secondAttribute="leading" id="FvZ-0D-tpZ"/>
+                            <constraint firstItem="upU-l4-CHQ" firstAttribute="top" secondItem="Moh-Yr-fxl" secondAttribute="bottom" constant="40" id="VVI-9G-4jG"/>
+                            <constraint firstItem="upU-l4-CHQ" firstAttribute="centerX" secondItem="Moh-Yr-fxl" secondAttribute="centerX" id="XAJ-v2-Tlm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g8g-Kt-LI7"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="Moh-Yr-fxl" id="53x-oQ-0sq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OER-1V-Rfy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-76" y="805"/>
+        </scene>
         <!--Taking Picture View Controller-->
         <scene sceneID="gjG-hE-tKz">
             <objects>

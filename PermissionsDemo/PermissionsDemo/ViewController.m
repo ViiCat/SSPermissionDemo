@@ -56,7 +56,7 @@
                         @"相机":@"TakingPictureViewController",
 //                        @"麦克风":@"",
 //                        @"位置":@"",
-//                        @"日历":@"",
+                        @"日历":@"CalendarReminderViewController",
 //                        @"提醒事项":@"",
 //                        @"运动与健身":@"",
 //                        @"健康更新":@"",

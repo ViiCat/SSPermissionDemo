@@ -117,32 +117,68 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Moh-Yr-fxl">
-                                <rect key="frame" x="0.0" y="70" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="567421617.02287698">
+                                    <!--2018-12-25 09:06:57 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="zh_CN"/>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fMB-i6-tMR">
+                                <rect key="frame" x="0.0" y="256" width="375" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="567421617.02287698">
                                     <!--2018-12-25 09:06:57 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="zh_CN"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upU-l4-CHQ">
-                                <rect key="frame" x="139" y="326" width="97" height="30"/>
-                                <state key="normal" title="Add Reminder"/>
+                                <rect key="frame" x="119.5" y="492" width="136" height="30"/>
+                                <state key="normal" title="Add Calendar Event"/>
                                 <connections>
-                                    <action selector="addReminder:" destination="Fjq-CM-R5c" eventType="touchUpInside" id="GrN-t2-Zrd"/>
+                                    <action selector="addCalendar:" destination="Fjq-CM-R5c" eventType="touchUpInside" id="fev-rD-BGq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXD-e2-gpV">
+                                <rect key="frame" x="122.5" y="530" width="133" height="30"/>
+                                <state key="normal" title="Get Calendar Event"/>
+                                <connections>
+                                    <action selector="getCalendar:" destination="Fjq-CM-R5c" eventType="touchUpInside" id="yXz-lc-AqH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOV-RW-2SD">
+                                <rect key="frame" x="0.0" y="256" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Et-nn-3iB">
+                                <rect key="frame" x="0.0" y="20" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Moh-Yr-fxl" firstAttribute="top" secondItem="g8g-Kt-LI7" secondAttribute="top" constant="50" id="3RF-Nd-WaN"/>
+                            <constraint firstItem="Moh-Yr-fxl" firstAttribute="top" secondItem="g8g-Kt-LI7" secondAttribute="top" id="3RF-Nd-WaN"/>
                             <constraint firstItem="Moh-Yr-fxl" firstAttribute="trailing" secondItem="g8g-Kt-LI7" secondAttribute="trailing" id="77f-Ms-Jv7"/>
+                            <constraint firstItem="dXD-e2-gpV" firstAttribute="top" secondItem="upU-l4-CHQ" secondAttribute="bottom" constant="8" id="AWq-Db-Wdr"/>
                             <constraint firstItem="Moh-Yr-fxl" firstAttribute="leading" secondItem="g8g-Kt-LI7" secondAttribute="leading" id="FvZ-0D-tpZ"/>
-                            <constraint firstItem="upU-l4-CHQ" firstAttribute="top" secondItem="Moh-Yr-fxl" secondAttribute="bottom" constant="40" id="VVI-9G-4jG"/>
+                            <constraint firstItem="fMB-i6-tMR" firstAttribute="top" secondItem="FOV-RW-2SD" secondAttribute="top" id="ITD-Un-6fH"/>
+                            <constraint firstItem="upU-l4-CHQ" firstAttribute="top" secondItem="fMB-i6-tMR" secondAttribute="bottom" constant="20" id="VVI-9G-4jG"/>
                             <constraint firstItem="upU-l4-CHQ" firstAttribute="centerX" secondItem="Moh-Yr-fxl" secondAttribute="centerX" id="XAJ-v2-Tlm"/>
+                            <constraint firstItem="FOV-RW-2SD" firstAttribute="leading" secondItem="fMB-i6-tMR" secondAttribute="leading" id="Y6R-ya-TQ2"/>
+                            <constraint firstItem="3Et-nn-3iB" firstAttribute="leading" secondItem="Moh-Yr-fxl" secondAttribute="leading" id="Zca-XE-hhS"/>
+                            <constraint firstItem="fMB-i6-tMR" firstAttribute="leading" secondItem="g8g-Kt-LI7" secondAttribute="leading" id="aAM-7Q-tYv"/>
+                            <constraint firstItem="fMB-i6-tMR" firstAttribute="top" secondItem="Moh-Yr-fxl" secondAttribute="bottom" constant="20" id="ptN-I1-p2W"/>
+                            <constraint firstItem="fMB-i6-tMR" firstAttribute="trailing" secondItem="g8g-Kt-LI7" secondAttribute="trailing" id="ucc-Uf-BWt"/>
+                            <constraint firstItem="3Et-nn-3iB" firstAttribute="top" secondItem="Moh-Yr-fxl" secondAttribute="top" id="vu5-Tc-Jhn"/>
+                            <constraint firstItem="dXD-e2-gpV" firstAttribute="trailing" secondItem="upU-l4-CHQ" secondAttribute="trailing" id="waJ-X6-tYy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g8g-Kt-LI7"/>
                     </view>
                     <connections>
-                        <outlet property="datePicker" destination="Moh-Yr-fxl" id="53x-oQ-0sq"/>
+                        <outlet property="endDatePicker" destination="fMB-i6-tMR" id="Ubq-Uz-qt4"/>
+                        <outlet property="startDatePicker" destination="Moh-Yr-fxl" id="BSB-6c-9sJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OER-1V-Rfy" userLabel="First Responder" sceneMemberID="firstResponder"/>

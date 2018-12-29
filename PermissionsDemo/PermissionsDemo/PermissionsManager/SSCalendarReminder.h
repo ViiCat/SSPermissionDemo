@@ -17,12 +17,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^CompletionBlock)(void);
-
 @interface SSCalendarReminder : NSObject
 + (instancetype)shareInstance;
 
-- (EKEvent *)addEvent:(void(^)(SSEventItem *eventItem))eventItem completion:(CompletionBlock)completion;
+// 添加日历事件
+- (void)addCalendarEvent:(void(^)(SSEventItem *eventItem))eventItem completion:(void(^)(EKEvent * event))completion;
+
+// 获取时间范围里的所有日历事件
+- (void)getCalendarEventWithStartDate:(NSDate *)startDate
+                              endDate:(NSDate *)endDate
+                           completion:(void(^)(NSArray<EKEvent *> * eventList))completion;
 @end
 
 
@@ -38,8 +42,10 @@ typedef void(^CompletionBlock)(void);
 @property (nonatomic, strong) NSURL *url;
 //日记(事件的详情内容)
 @property (nonatomic, strong) NSString *notes;
-
 //All-Day
+@property (nonatomic, assign) BOOL allDay;
+//Alerm 闹钟提醒
+@property (nonatomic, assign) NSTimeInterval triggerInterval; // 例如-10则开始日期前10秒
 
 @end
 

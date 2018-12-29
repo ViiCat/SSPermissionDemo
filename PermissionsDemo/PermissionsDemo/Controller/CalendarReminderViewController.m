@@ -10,7 +10,8 @@
 #import "SSCalendarReminder.h"
 
 @interface CalendarReminderViewController ()
-@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UIDatePicker *startDatePicker;
+@property (weak, nonatomic) IBOutlet UIDatePicker *endDatePicker;
 
 @end
 
@@ -21,17 +22,28 @@
     // Do any additional setup after loading the view.
     
 }
-- (IBAction)addReminder:(id)sender {
-//    [[SSCalendarReminder shareInstance] createEventCalendarTitle:@"提醒标题" location:@"提醒内容" startDate:date endDate:self.datePicker.date allDay:YES alarmArray:@[@"1",@"2",@"3"]];
+- (IBAction)addCalendar:(id)sender {
 
     __weak typeof(self) weakSelf = self;
-    [[SSCalendarReminder shareInstance] addEvent:^(SSEventItem * _Nonnull item) {
-        item.title = @"去健身";
-        item.startDate = [NSDate date];
-        item.endDate = weakSelf.datePicker.date;
-    } completion:^{
-        NSLog(@"completed");
+    [[SSCalendarReminder shareInstance] addCalendarEvent:^(SSEventItem * _Nonnull eventItem) {
+        eventItem.title = @"去健身";
+        eventItem.startDate = weakSelf.startDatePicker.date;//[NSDate date];
+        eventItem.endDate = weakSelf.endDatePicker.date;
+    } completion:^(EKEvent * _Nonnull event) {
+        
     }];
+}
+
+- (IBAction)getCalendar:(id)sender {
+    
+    [[SSCalendarReminder shareInstance] getCalendarEventWithStartDate:self.startDatePicker.date endDate:self.endDatePicker.date completion:^(NSArray<EKEvent *> * _Nonnull eventList) {
+        
+        [eventList enumerateObjectsUsingBlock:^(EKEvent * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSLog(@"Event Title:%@",obj.title);
+        }];
+    }];
+    
+
 }
 
 /*

@@ -15,11 +15,16 @@
  */
 @class SSEventItem;
 
+typedef NS_ENUM(NSInteger, kRemindarType) {
+    kRemindarTypeCompleted = 0, // 已提醒过的任务
+    kRemindarTypeIncomplete,    // 未提醒过的任务
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SSCalendarReminder : NSObject
 + (instancetype)shareInstance;
-
+#pragma mark -
 // 添加日历事件
 - (void)addCalendarEvent:(void(^)(SSEventItem *eventItem))eventItem completion:(void(^)(EKEvent * event))completion;
 
@@ -27,9 +32,22 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)getCalendarEventWithStartDate:(NSDate *)startDate
                               endDate:(NSDate *)endDate
                            completion:(void(^)(NSArray<EKEvent *> * eventList))completion;
+#pragma mark -
+// 添加提醒事项
+- (void)addReminder:(void(^)(SSEventItem *eventItem))eventItem completion:(void(^)(EKReminder *reminder))completion;
+
+
+// 获取提醒事项(获取所有)
+- (void)getReminderCompletion:(void(^)(NSArray<EKReminder *> * eventList))completion;
+
+// (按日期范围获取 过期或未过期)
+- (void)getReminderStartDate:(NSDate *)startDate
+                     endDate:(NSDate *)endDate
+                        type:(kRemindarType)type
+                  completion:(void(^)(NSArray<EKReminder *> * eventList))completion;
 @end
 
-
+#pragma mark -
 @interface SSEventItem : NSObject
 @property (nonatomic, strong) NSString *title;
 //开始时间

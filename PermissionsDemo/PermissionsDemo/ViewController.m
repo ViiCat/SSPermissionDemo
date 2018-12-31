@@ -55,7 +55,7 @@
         _dataSource = @{@"相册":@"ImagePickerViewController",
                         @"相机":@"TakingPictureViewController",
 //                        @"麦克风":@"",
-//                        @"位置":@"",
+                        @"位置":@"LocationViewController",
                         @"日历":@"CalendarReminderViewController",
 //                        @"提醒事项":@"",
 //                        @"运动与健身":@"",

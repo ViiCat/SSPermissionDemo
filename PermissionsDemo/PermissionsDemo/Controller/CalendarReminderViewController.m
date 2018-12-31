@@ -42,8 +42,27 @@
             NSLog(@"Event Title:%@",obj.title);
         }];
     }];
-    
+}
 
+- (IBAction)addReminder:(id)sender {
+    
+    __weak typeof(self) weakSelf = self;
+    [[SSCalendarReminder shareInstance] addReminder:^(SSEventItem * _Nonnull eventItem) {
+        eventItem.title = @"等会儿去打雪仗";
+        eventItem.triggerInterval = [weakSelf.startDatePicker.date timeIntervalSinceDate:[NSDate date]];
+    } completion:^(EKReminder * _Nonnull reminder) {
+        
+    }];
+}
+
+- (IBAction)getRemindar:(id)sender {
+    
+    [[SSCalendarReminder shareInstance] getReminderCompletion:^(NSArray<EKReminder *> * _Nonnull eventList) {
+
+        [eventList enumerateObjectsUsingBlock:^(EKReminder * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+             NSLog(@"reminder - title：%@ ， notes：%@",obj.title, obj.notes);
+        }];
+    }];
 }
 
 /*

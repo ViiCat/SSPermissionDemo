@@ -12,6 +12,9 @@
 		5610CC7721CFA9BB003B69DD /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5610CC7621CFA9BB003B69DD /* ImagePickerViewController.m */; };
 		5610CC7A21D2263B003B69DD /* SSCalendarReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5610CC7921D2263B003B69DD /* SSCalendarReminder.m */; };
 		5610CC7D21D22A27003B69DD /* CalendarReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5610CC7C21D22A27003B69DD /* CalendarReminderViewController.m */; };
+		5610CC8021D91715003B69DD /* SSCoreLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5610CC7F21D91715003B69DD /* SSCoreLocation.m */; };
+		5610CC8321D91A05003B69DD /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5610CC8221D91A05003B69DD /* LocationViewController.m */; };
+		56F772E021DA3C0E00A870AB /* CLLocation+Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F772DF21DA3C0E00A870AB /* CLLocation+Location.m */; };
 		56FDED4A21CE55EC009981C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FDED4921CE55EC009981C1 /* AppDelegate.m */; };
 		56FDED4D21CE55EC009981C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FDED4C21CE55EC009981C1 /* ViewController.m */; };
 		56FDED5021CE55EC009981C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56FDED4E21CE55EC009981C1 /* Main.storyboard */; };
@@ -21,7 +24,6 @@
 		56FDED5B21CE55ED009981C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FDED5A21CE55ED009981C1 /* main.m */; };
 		56FDED6521CE55ED009981C1 /* PermissionsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FDED6421CE55ED009981C1 /* PermissionsDemoTests.m */; };
 		56FDED7021CE55ED009981C1 /* PermissionsDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FDED6F21CE55ED009981C1 /* PermissionsDemoUITests.m */; };
-		56FDED8021CE5A5B009981C1 /* SSPermissionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FDED7F21CE5A5B009981C1 /* SSPermissionManager.m */; };
 		56FDED8321CE6461009981C1 /* SSAccessAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FDED8221CE6461009981C1 /* SSAccessAlbum.m */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,12 @@
 		5610CC7921D2263B003B69DD /* SSCalendarReminder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCalendarReminder.m; sourceTree = "<group>"; };
 		5610CC7B21D22A27003B69DD /* CalendarReminderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarReminderViewController.h; sourceTree = "<group>"; };
 		5610CC7C21D22A27003B69DD /* CalendarReminderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarReminderViewController.m; sourceTree = "<group>"; };
+		5610CC7E21D91715003B69DD /* SSCoreLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCoreLocation.h; sourceTree = "<group>"; };
+		5610CC7F21D91715003B69DD /* SSCoreLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCoreLocation.m; sourceTree = "<group>"; };
+		5610CC8121D91A05003B69DD /* LocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		5610CC8221D91A05003B69DD /* LocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		56F772DE21DA3C0E00A870AB /* CLLocation+Location.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CLLocation+Location.h"; sourceTree = "<group>"; };
+		56F772DF21DA3C0E00A870AB /* CLLocation+Location.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+Location.m"; sourceTree = "<group>"; };
 		56FDED4521CE55EC009981C1 /* PermissionsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PermissionsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56FDED4821CE55EC009981C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		56FDED4921CE55EC009981C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -70,8 +78,6 @@
 		56FDED6B21CE55ED009981C1 /* PermissionsDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PermissionsDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56FDED6F21CE55ED009981C1 /* PermissionsDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PermissionsDemoUITests.m; sourceTree = "<group>"; };
 		56FDED7121CE55ED009981C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56FDED7E21CE5A5B009981C1 /* SSPermissionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSPermissionManager.h; sourceTree = "<group>"; };
-		56FDED7F21CE5A5B009981C1 /* SSPermissionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSPermissionManager.m; sourceTree = "<group>"; };
 		56FDED8121CE6461009981C1 /* SSAccessAlbum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSAccessAlbum.h; sourceTree = "<group>"; };
 		56FDED8221CE6461009981C1 /* SSAccessAlbum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSAccessAlbum.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +116,8 @@
 				5610CC7621CFA9BB003B69DD /* ImagePickerViewController.m */,
 				5610CC7B21D22A27003B69DD /* CalendarReminderViewController.h */,
 				5610CC7C21D22A27003B69DD /* CalendarReminderViewController.m */,
+				5610CC8121D91A05003B69DD /* LocationViewController.h */,
+				5610CC8221D91A05003B69DD /* LocationViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,14 +182,16 @@
 		56FDED7D21CE5A2B009981C1 /* PermissionsManager */ = {
 			isa = PBXGroup;
 			children = (
-				56FDED7E21CE5A5B009981C1 /* SSPermissionManager.h */,
-				56FDED7F21CE5A5B009981C1 /* SSPermissionManager.m */,
 				56FDED8121CE6461009981C1 /* SSAccessAlbum.h */,
 				56FDED8221CE6461009981C1 /* SSAccessAlbum.m */,
 				5610CC6F21CF9EF0003B69DD /* SSAccessCamera.h */,
 				5610CC7021CF9EF0003B69DD /* SSAccessCamera.m */,
 				5610CC7821D2263B003B69DD /* SSCalendarReminder.h */,
 				5610CC7921D2263B003B69DD /* SSCalendarReminder.m */,
+				5610CC7E21D91715003B69DD /* SSCoreLocation.h */,
+				5610CC7F21D91715003B69DD /* SSCoreLocation.m */,
+				56F772DE21DA3C0E00A870AB /* CLLocation+Location.h */,
+				56F772DF21DA3C0E00A870AB /* CLLocation+Location.m */,
 			);
 			path = PermissionsManager;
 			sourceTree = "<group>";
@@ -317,14 +327,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				56FDED4D21CE55EC009981C1 /* ViewController.m in Sources */,
+				5610CC8021D91715003B69DD /* SSCoreLocation.m in Sources */,
 				56FDED8321CE6461009981C1 /* SSAccessAlbum.m in Sources */,
 				5610CC7D21D22A27003B69DD /* CalendarReminderViewController.m in Sources */,
 				56FDED5321CE55EC009981C1 /* PermissionsDemo.xcdatamodeld in Sources */,
-				56FDED8021CE5A5B009981C1 /* SSPermissionManager.m in Sources */,
 				5610CC7121CF9EF0003B69DD /* SSAccessCamera.m in Sources */,
 				56FDED5B21CE55ED009981C1 /* main.m in Sources */,
+				5610CC8321D91A05003B69DD /* LocationViewController.m in Sources */,
 				56FDED4A21CE55EC009981C1 /* AppDelegate.m in Sources */,
 				5610CC7A21D2263B003B69DD /* SSCalendarReminder.m in Sources */,
+				56F772E021DA3C0E00A870AB /* CLLocation+Location.m in Sources */,
 				5610CC7721CFA9BB003B69DD /* ImagePickerViewController.m in Sources */,
 				5610CC7421CFA5B9003B69DD /* TakingPictureViewController.m in Sources */,
 			);

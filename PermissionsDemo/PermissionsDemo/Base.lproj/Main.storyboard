@@ -131,14 +131,21 @@
                                 <locale key="locale" localeIdentifier="zh_CN"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upU-l4-CHQ">
-                                <rect key="frame" x="119.5" y="492" width="136" height="30"/>
+                                <rect key="frame" x="31.5" y="492" width="136" height="30"/>
                                 <state key="normal" title="Add Calendar Event"/>
                                 <connections>
                                     <action selector="addCalendar:" destination="Fjq-CM-R5c" eventType="touchUpInside" id="fev-rD-BGq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWU-lA-lLJ">
+                                <rect key="frame" x="207.5" y="492" width="97" height="30"/>
+                                <state key="normal" title="Add Reminder"/>
+                                <connections>
+                                    <action selector="addReminder:" destination="Fjq-CM-R5c" eventType="touchUpInside" id="7C7-sG-VLn"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXD-e2-gpV">
-                                <rect key="frame" x="122.5" y="530" width="133" height="30"/>
+                                <rect key="frame" x="34.5" y="530" width="133" height="30"/>
                                 <state key="normal" title="Get Calendar Event"/>
                                 <connections>
                                     <action selector="getCalendar:" destination="Fjq-CM-R5c" eventType="touchUpInside" id="yXz-lc-AqH"/>
@@ -156,19 +163,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWd-7U-RZx">
+                                <rect key="frame" x="209" y="530" width="94" height="30"/>
+                                <state key="normal" title="Get Remindar"/>
+                                <connections>
+                                    <action selector="getRemindar:" destination="Fjq-CM-R5c" eventType="touchUpInside" id="dP2-21-Cqp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Moh-Yr-fxl" firstAttribute="top" secondItem="g8g-Kt-LI7" secondAttribute="top" id="3RF-Nd-WaN"/>
+                            <constraint firstItem="aWU-lA-lLJ" firstAttribute="leading" secondItem="g8g-Kt-LI7" secondAttribute="centerX" constant="20" id="4N7-aO-2pI"/>
                             <constraint firstItem="Moh-Yr-fxl" firstAttribute="trailing" secondItem="g8g-Kt-LI7" secondAttribute="trailing" id="77f-Ms-Jv7"/>
+                            <constraint firstItem="upU-l4-CHQ" firstAttribute="trailing" secondItem="g8g-Kt-LI7" secondAttribute="centerX" constant="-20" id="9u6-ny-Nah"/>
                             <constraint firstItem="dXD-e2-gpV" firstAttribute="top" secondItem="upU-l4-CHQ" secondAttribute="bottom" constant="8" id="AWq-Db-Wdr"/>
                             <constraint firstItem="Moh-Yr-fxl" firstAttribute="leading" secondItem="g8g-Kt-LI7" secondAttribute="leading" id="FvZ-0D-tpZ"/>
                             <constraint firstItem="fMB-i6-tMR" firstAttribute="top" secondItem="FOV-RW-2SD" secondAttribute="top" id="ITD-Un-6fH"/>
                             <constraint firstItem="upU-l4-CHQ" firstAttribute="top" secondItem="fMB-i6-tMR" secondAttribute="bottom" constant="20" id="VVI-9G-4jG"/>
-                            <constraint firstItem="upU-l4-CHQ" firstAttribute="centerX" secondItem="Moh-Yr-fxl" secondAttribute="centerX" id="XAJ-v2-Tlm"/>
+                            <constraint firstItem="aWU-lA-lLJ" firstAttribute="centerY" secondItem="upU-l4-CHQ" secondAttribute="centerY" id="XYS-RS-NJW"/>
                             <constraint firstItem="FOV-RW-2SD" firstAttribute="leading" secondItem="fMB-i6-tMR" secondAttribute="leading" id="Y6R-ya-TQ2"/>
+                            <constraint firstItem="aWd-7U-RZx" firstAttribute="centerX" secondItem="aWU-lA-lLJ" secondAttribute="centerX" id="Y8e-3Y-nPN"/>
                             <constraint firstItem="3Et-nn-3iB" firstAttribute="leading" secondItem="Moh-Yr-fxl" secondAttribute="leading" id="Zca-XE-hhS"/>
                             <constraint firstItem="fMB-i6-tMR" firstAttribute="leading" secondItem="g8g-Kt-LI7" secondAttribute="leading" id="aAM-7Q-tYv"/>
+                            <constraint firstItem="aWd-7U-RZx" firstAttribute="centerY" secondItem="dXD-e2-gpV" secondAttribute="centerY" id="fEc-5h-Ef2"/>
                             <constraint firstItem="fMB-i6-tMR" firstAttribute="top" secondItem="Moh-Yr-fxl" secondAttribute="bottom" constant="20" id="ptN-I1-p2W"/>
                             <constraint firstItem="fMB-i6-tMR" firstAttribute="trailing" secondItem="g8g-Kt-LI7" secondAttribute="trailing" id="ucc-Uf-BWt"/>
                             <constraint firstItem="3Et-nn-3iB" firstAttribute="top" secondItem="Moh-Yr-fxl" secondAttribute="top" id="vu5-Tc-Jhn"/>
@@ -184,6 +202,100 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OER-1V-Rfy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-76" y="805"/>
+        </scene>
+        <!--Location View Controller-->
+        <scene sceneID="NGU-kJ-6Xa">
+            <objects>
+                <viewController storyboardIdentifier="LocationViewController" id="4vB-Hm-4xy" customClass="LocationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qdu-lk-Q5h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtZ-sl-OWJ">
+                                <rect key="frame" x="116" y="73" width="143" height="30"/>
+                                <state key="normal" title="StartUpdateLocation"/>
+                                <connections>
+                                    <action selector="startUpdateLocation:" destination="4vB-Hm-4xy" eventType="touchUpInside" id="G7G-kb-Yh0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJF-aJ-ZT6">
+                                <rect key="frame" x="117" y="111" width="141" height="30"/>
+                                <state key="normal" title="StopUpdateLocation"/>
+                                <connections>
+                                    <action selector="stopUpdateLocation:" destination="4vB-Hm-4xy" eventType="touchUpInside" id="q4S-5R-MFZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcQ-ye-PnG">
+                                <rect key="frame" x="105" y="149" width="165" height="30"/>
+                                <state key="normal" title="RequestUpdateLocation"/>
+                                <connections>
+                                    <action selector="requestUpdateLocation:" destination="4vB-Hm-4xy" eventType="touchUpInside" id="5mO-TW-YkB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKK-KJ-Wze">
+                                <rect key="frame" x="129.5" y="549" width="116" height="30"/>
+                                <state key="normal" title="Custom Location"/>
+                                <connections>
+                                    <action selector="customLocation:" destination="4vB-Hm-4xy" eventType="touchUpInside" id="Qew-RP-nRq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rg-Vc-Bin">
+                                <rect key="frame" x="100" y="40" width="67.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Longitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zf7-dL-Q3B">
+                                <rect key="frame" x="216" y="39" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VEn-YO-Ndv">
+                                <rect key="frame" x="10" y="189" width="355" height="355"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="355" id="Wcn-aT-fLq"/>
+                                    <constraint firstAttribute="width" constant="355" id="qy3-Lo-VaJ"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czK-St-s9S">
+                                <rect key="frame" x="154" y="584" width="67" height="30"/>
+                                <state key="normal" title="Navigator"/>
+                                <connections>
+                                    <action selector="navigator:" destination="4vB-Hm-4xy" eventType="touchUpInside" id="iKz-pR-bpF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VEn-YO-Ndv" firstAttribute="top" secondItem="GcQ-ye-PnG" secondAttribute="bottom" constant="10" id="4gz-K4-5kI"/>
+                            <constraint firstItem="mtZ-sl-OWJ" firstAttribute="centerX" secondItem="jHq-Gw-lQN" secondAttribute="centerX" id="8fI-RY-Ipu"/>
+                            <constraint firstItem="RJF-aJ-ZT6" firstAttribute="centerX" secondItem="mtZ-sl-OWJ" secondAttribute="centerX" id="ISA-ne-plV"/>
+                            <constraint firstItem="VEn-YO-Ndv" firstAttribute="centerX" secondItem="GcQ-ye-PnG" secondAttribute="centerX" id="KUJ-F4-wL3"/>
+                            <constraint firstItem="RJF-aJ-ZT6" firstAttribute="top" secondItem="mtZ-sl-OWJ" secondAttribute="bottom" constant="8" id="P26-P3-zX0"/>
+                            <constraint firstItem="mtZ-sl-OWJ" firstAttribute="top" secondItem="jHq-Gw-lQN" secondAttribute="top" constant="53" id="Sg2-59-zxK"/>
+                            <constraint firstItem="GcQ-ye-PnG" firstAttribute="centerX" secondItem="RJF-aJ-ZT6" secondAttribute="centerX" id="TUl-Uf-6Xh"/>
+                            <constraint firstItem="0Rg-Vc-Bin" firstAttribute="top" secondItem="jHq-Gw-lQN" secondAttribute="top" constant="20" id="WRa-0D-Dha"/>
+                            <constraint firstItem="czK-St-s9S" firstAttribute="top" secondItem="UKK-KJ-Wze" secondAttribute="bottom" constant="5" id="WYW-UF-TV3"/>
+                            <constraint firstItem="UKK-KJ-Wze" firstAttribute="centerX" secondItem="VEn-YO-Ndv" secondAttribute="centerX" id="ZXt-eN-2Ob"/>
+                            <constraint firstItem="0Rg-Vc-Bin" firstAttribute="trailing" secondItem="jHq-Gw-lQN" secondAttribute="centerX" constant="-20" id="eI7-8z-td4"/>
+                            <constraint firstItem="Zf7-dL-Q3B" firstAttribute="centerY" secondItem="0Rg-Vc-Bin" secondAttribute="centerY" id="ouX-r6-ZDs"/>
+                            <constraint firstItem="GcQ-ye-PnG" firstAttribute="top" secondItem="RJF-aJ-ZT6" secondAttribute="bottom" constant="8" id="ttf-iD-tdu"/>
+                            <constraint firstItem="Zf7-dL-Q3B" firstAttribute="leading" secondItem="jHq-Gw-lQN" secondAttribute="centerX" constant="20" id="vtk-20-2no"/>
+                            <constraint firstItem="czK-St-s9S" firstAttribute="centerX" secondItem="UKK-KJ-Wze" secondAttribute="centerX" id="z7z-NN-daw"/>
+                            <constraint firstItem="UKK-KJ-Wze" firstAttribute="top" secondItem="VEn-YO-Ndv" secondAttribute="bottom" constant="5" id="zoR-Dw-skf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jHq-Gw-lQN"/>
+                    </view>
+                    <connections>
+                        <outlet property="lbLatitude" destination="0Rg-Vc-Bin" id="q90-GT-7DR"/>
+                        <outlet property="lbLongitude" destination="Zf7-dL-Q3B" id="70b-zC-P9h"/>
+                        <outlet property="mapView" destination="VEn-YO-Ndv" id="k9s-8I-p02"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lad-O2-v9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="612" y="805"/>
         </scene>
         <!--Taking Picture View Controller-->
         <scene sceneID="gjG-hE-tKz">
